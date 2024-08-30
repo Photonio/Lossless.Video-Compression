@@ -1,6 +1,8 @@
 sch: https://www.google.com/search?q=h264+compress+smaller+lossless
 
 # Discuss:
+## [How to compress size lossing minum quality](https://www.reddit.com/r/handbrake/comments/13ynst2/how_to_compress_size_lossing_minum_quality/)
+
 ## [h264 lossless coding](https://stackoverflow.com/questions/6701805/h264-lossless-coding)
 question:
 >Is it possible to do completely lossless encoding in h264? By lossless, I mean that if I feed it a series of frames and encode them, and then if I extract all the frames from the encoded video, I will get the exact same frames as in the input, pixel by pixel, frame by frame. Is that actually possible? Take this example:
