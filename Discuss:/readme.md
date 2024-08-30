@@ -14,4 +14,19 @@ question:
 >
 >UPDATE 2: Now x264 doesn't crash. I can use as sources either avisynth or lossless yv12 lagarith (to avoid the colorspace compression warning). Howerver, even with --qp 0 and a rgb or yv12 source I still get some differences, minimal but present. This is troubling, because all the information I have found on lossless predictive coding (--qp 0) claims that the whole encoding should be lossless, but I am unable to verifiy this.
 
-Answer:
+## Best.Answer:
+1) https://stackoverflow.com/a/11458983
+>I agree that sometimes the loss in data is acceptable, but it's not simply a matter of how it looks immediately after compression.
+>
+>Even a visually imperceptible loss of color data can degrade footage such that color correction, greenscreen keying, tracking, and other post tasks become more difficult or impossible, which add expense to a production.
+>
+>It really depends when and how you compress in the pipeline, but ultimately it makes sense to archive the original quality, as storage is usually far less expensive than reshooting.
+
+2) https://stackoverflow.com/a/20511803
+>To generate lossless H.264 with HandBrake GUI, set Video Codec: H.264, Constant Quality, RF: 0, H.264 Profile: auto. Though this file is not supported natively by Apple, it can be re-encoded as near-lossless for playback.
+>
+>HandBrake GUI's Activity Window:
+>
+>`H.264 Profile: auto; Encoding at constant RF 0.000000...profile High 4:4:4 Predictive, level 3.0, 4:2:0 8-bit`
+>
+>`H.264 Profile: high; Encoding at constant RF 0.000000...lossless requires high444 profile, disabling...profile High, level 3.0`
